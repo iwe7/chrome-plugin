@@ -1,0 +1,21 @@
+
+<script>
+  function parseSelector(selector) {
+    const selectors = selector.split(',');
+    const res = [];
+    for (let selectorsKey in selectors) {
+      const selects = selectors[selectorsKey].split(' ');
+      for (let selectsKey in selects) {
+        const select = selects[selectsKey];
+        if (/[a-z]+\:/.test(select)) {
+          const pses = select.split(/[a-z]+\:/);
+          res.push(pses[pses.length - 1]);
+        }
+      }
+    }
+    return res;
+  }
+  res = parseSelector('h2 test:after test:not(:root)');
+  console.log(res);
+
+</script>

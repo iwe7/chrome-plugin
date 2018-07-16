@@ -1,0 +1,14 @@
+.___iwe7_class_active {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    border: 1px dashed red !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}
